@@ -178,7 +178,7 @@ exports.updateTask = async (req, res) => {
       req.body.taskData;
 
     const updatedTask = await Task.updateOne(
-      { emailid: emailid },
+      { id: id },
       { $set: req.body.taskData },
       { upsert: true, new: true }
     );
@@ -206,9 +206,9 @@ exports.deleteTask = async (req, res) => {
   try {
     const { id, emailid } = req.body.taskData;
 
-    console.log(req.body);
+    console.log("del requestttttttttttt",req.body);
 
-    const deletedTask = await Task.deleteOne({ emailid: emailid });
+    const deletedTask = await Task.deleteOne({ id: id });
 
     console.log(deletedTask);
     if (deletedTask.deletedCount == 0) {
