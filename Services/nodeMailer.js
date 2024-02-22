@@ -212,7 +212,7 @@ exports.deleteMail = (emailid) => {
       <div class="container">
         <h1>Task Reminder - Updated </h1>
         <div class="task-details">
-          <p><strong>Task Title:</strong> Task deleted successfully </p>
+          <p><strong></strong> Task deleted successfully </p>
     
           <!-- Add more task details as needed -->
         </div>
